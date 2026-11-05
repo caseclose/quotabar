@@ -22,8 +22,6 @@
 
 <p align="center"><sub>真实SwiftUI面板组件渲染，使用合成的演示额度。图中不包含真实账号、余额或企业用量。</sub></p>
 
-<p align="center">深浅两套配图 · <a href="Docs/images/overview-light.png">查看浅色版</a> · <a href="Docs/images/overview.png">查看深色版</a></p>
-
 ### 轻巧常驻，展开看全
 
 <picture>
