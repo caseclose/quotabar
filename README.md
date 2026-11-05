@@ -60,16 +60,24 @@
 
 ## 开始使用
 
-需要**macOS 13或更新版本**，以及**Xcode Command Line Tools**。已在Apple Silicon环境验证，构建脚本使用当前机器的本机架构。
+### 下载安装
 
-在克隆后的项目目录执行：
+[**下载QuotaBar v1.0.0 · Apple Silicon**](https://github.com/caseclose/quotabar/releases/download/v1.0.0/QuotaBar-v1.0.0-macos-arm64.zip) · [所有Release](https://github.com/caseclose/quotabar/releases)
+
+适用于**macOS 13或更新版本的Apple Silicon Mac（M系列芯片）**。下载ZIP并解压，将`QuotaBar.app`拖入“应用程序”后打开；无需安装开发工具。发布页提供`SHA256SUMS.txt`校验文件。
+
+此版本采用ad-hoc签名，尚未经过Apple公证，首次打开可能出现系统安全提示。凭据仍保存在使用者自己的Mac上，下载包不含账号或登录状态。
+
+### 从源码构建
+
+需要Xcode Command Line Tools。在克隆后的项目目录执行：
 
 ```sh
 ./build.sh
 open QuotaBar.app
 ```
 
-生成的应用使用本机ad-hoc签名，未经过Apple公证；重新构建后，系统可能再次请求钥匙串访问授权。
+默认编译当前机器架构，最低系统版本为macOS 13。重新构建后，系统可能再次请求钥匙串访问授权。
 
 ### 连接你的账号
 
@@ -101,6 +109,9 @@ open QuotaBar.app
 
 # 重新生成README中的脱敏效果图
 ./Docs/render-previews.sh
+
+# 构建并自测Apple Silicon发布包
+./scripts/package-release.sh
 ```
 
 测试覆盖额度换算、模型百分比与取整、未知上限，以及登录超时、取消、重试、重复回调抑制、拒绝登录和浏览器启动失败。
