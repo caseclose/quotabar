@@ -1,0 +1,28 @@
+# Generated applications and build output
+*.app/
+.build/
+build/
+DerivedData/
+*.dSYM/
+*.zip
+.DS_Store
+# Local configuration, credentials and runtime data
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.keychain*
+*.log
+*.sqlite*
+*.db
+*.har
+cookies*
+session*.json
+auth*.json
+credentials*
+# Local investigations, screenshots and backups
+work/
+private/
+screenshots/
+*.bak
